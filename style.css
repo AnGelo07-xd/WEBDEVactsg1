@@ -1,0 +1,113 @@
+:root {
+    --primary-color: #1e1e2f;
+    --secondary-color: #ff6b6b;
+    --background-color: #f4f4f8;
+    --text-color: #222;
+    --spacing: 20px;
+    --navbar-height: 60px;
+    --radius1: 5px;
+    --radius2: 10px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: var(--navbar-height);
+    position: sticky;
+    top: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: var(--radius2);
+}
+.navbar a:hover {
+    background-color: var(--secondary-color);
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+    margin: var(--spacing);
+    border-radius: var(--radius2);
+}
+
+.sidebar button {
+    background-color: var(--text-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+    border-radius: var(--radius1);
+}
+
+.sidebar button:hover {
+    background-color: var(--secondary-color);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing);
+    padding: var(--spacing);
+    height: 100%;
+    width: 50%;
+}
+
+.card {
+    background-color: white;
+    padding: var(--spacing);
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    border-radius: var(--radius2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius1);
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
